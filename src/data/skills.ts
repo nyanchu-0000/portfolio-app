@@ -4,111 +4,79 @@ export const skills: Skill[] = [
     // Frontend
     {
         name: "HTML/CSS",
-        level: 5,
+        level: 3,
         category: "Frontend",
-        icon: "🌐",
     },
     {
         name: "JavaScript",
-        level: 5,
+        level: 2,
         category: "Frontend",
-        icon: "⚡",
     },
     {
         name: "TypeScript",
-        level: 5,
+        level: 2,
         category: "Frontend",
-        icon: "📘",
     },
     {
         name: "React",
-        level: 5,
+        level: 2,
         category: "Frontend",
-        icon: "⚛️",
     },
     {
         name: "Next.js",
-        level: 4,
+        level: 2,
         category: "Frontend",
-        icon: "▲",
-    },
-    {
-        name: "Vue.js",
-        level: 4,
-        category: "Frontend",
-        icon: "💚",
     },
     {
         name: "Tailwind CSS",
-        level: 5,
+        level: 2,
         category: "Frontend",
-        icon: "🎨",
     },
 
     // Backend
     {
         name: "Node.js",
-        level: 4,
+        level: 2,
         category: "Backend",
-        icon: "🟢",
     },
     {
-        name: "Express",
-        level: 4,
-        category: "Backend",
-        icon: "🚂",
-    },
-    {
-        name: "PostgreSQL",
+        name: "supabase",
         level: 3,
         category: "Backend",
-        icon: "🐘",
-    },
-    {
-        name: "Firebase",
-        level: 4,
-        category: "Backend",
-        icon: "🔥",
     },
 
     // Design
     {
         name: "Figma",
-        level: 5,
+        level: 4,
         category: "Design",
-        icon: "🎯",
     },
     {
         name: "Adobe Photoshop",
         level: 4,
         category: "Design",
-        icon: "🖼️",
     },
     {
         name: "Adobe Illustrator",
         level: 4,
         category: "Design",
-        icon: "✏️",
     },
 
     // Tools
     {
         name: "Git/GitHub",
-        level: 5,
+        level: 4,
         category: "Tools",
-        icon: "🔧",
-    },
-    {
-        name: "Docker",
-        level: 3,
-        category: "Tools",
-        icon: "🐳",
     },
     {
         name: "VS Code",
-        level: 5,
+        level: 4,
         category: "Tools",
-        icon: "💻",
+    },
+    {
+        name: "Cursor",
+        level: 4,
+        category: "Tools",
     },
 ];
 
