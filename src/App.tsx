@@ -11,7 +11,7 @@ import Contact from "./components/sections/Contact";
 
 function App() {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-cream-100">
             <Header />
             <main>
                 <Hero />

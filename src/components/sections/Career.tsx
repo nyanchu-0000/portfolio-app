@@ -4,11 +4,11 @@ import { careerItems } from "../../data/career";
 
 const Career: React.FC = () => {
     return (
-        <Section id="career" title="Career" className="bg-gray-50">
+        <Section id="career" title="CAREER" className="bg-cream-50">
             <div className="max-w-4xl mx-auto">
                 <div className="relative">
                     {/* Timeline line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-600 transform md:-translate-x-1/2"></div>
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-brown-400 transform md:-translate-x-1/2"></div>
 
                     {/* Career items */}
                     <div className="space-y-12">
@@ -22,7 +22,7 @@ const Career: React.FC = () => {
                                 } flex-col md:items-center`}
                             >
                                 {/* Timeline dot */}
-                                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-blue-600 rounded-full transform md:-translate-x-1/2 border-4 border-white shadow"></div>
+                                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-brown-700 rounded-full transform md:-translate-x-1/2 border-4 border-cream-50 shadow"></div>
 
                                 {/* Content */}
                                 <div
@@ -32,19 +32,19 @@ const Career: React.FC = () => {
                                             : "md:pl-12"
                                     }`}
                                 >
-                                    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                                        <div className="text-sm text-blue-600 font-semibold mb-2">
+                                    <div className="bg-cream-50 border border-sand-200 rounded-lg p-6 hover:shadow-lg transition-all">
+                                        <div className="text-sm text-brown-700 font-semibold mb-2">
                                             {item.period}
                                         </div>
                                         {item.company && (
-                                            <h3 className="text-xl font-bold mb-1">
+                                            <h3 className="text-xl font-bold mb-1 text-brown-900">
                                                 {item.company}
                                             </h3>
                                         )}
-                                        <h4 className="text-lg font-semibold text-gray-700 mb-3">
+                                        <h4 className="text-base font-semibold text-brown-700 mb-3">
                                             {item.position}
                                         </h4>
-                                        <p className="text-gray-600 leading-relaxed">
+                                        <p className="text-brown-600 leading-relaxed text-sm">
                                             {item.description}
                                         </p>
                                     </div>

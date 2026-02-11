@@ -26,22 +26,22 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <Section id="contact" title="Contact">
+        <Section id="contact" title="CONTACT" className="bg-cream-100">
             <div className="max-w-2xl mx-auto">
-                <p className="text-center text-gray-600 mb-12 text-lg">
+                <p className="text-center text-brown-700 mb-12 text-lg">
                     お仕事のご依頼、ご質問などお気軽にお問い合わせください。
                 </p>
 
                 <form
                     onSubmit={handleSubmit}
-                    className="bg-white rounded-lg shadow-lg p-8"
+                    className="bg-cream-50 border border-sand-200 rounded-lg shadow-lg p-8"
                 >
                     <div className="mb-6">
                         <label
                             htmlFor="name"
-                            className="block text-gray-700 font-semibold mb-2"
+                            className="block text-brown-800 font-semibold mb-2"
                         >
-                            お名前 <span className="text-red-500">*</span>
+                            お名前 <span className="text-red-600">*</span>
                         </label>
                         <input
                             type="text"
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            className="w-full px-4 py-3 border border-sand-300 rounded-lg bg-cream-50 focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
                             placeholder="山田 太郎"
                         />
                     </div>
@@ -58,10 +58,10 @@ const Contact: React.FC = () => {
                     <div className="mb-6">
                         <label
                             htmlFor="email"
-                            className="block text-gray-700 font-semibold mb-2"
+                            className="block text-brown-800 font-semibold mb-2"
                         >
                             メールアドレス{" "}
-                            <span className="text-red-500">*</span>
+                            <span className="text-red-600">*</span>
                         </label>
                         <input
                             type="email"
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            className="w-full px-4 py-3 border border-sand-300 rounded-lg bg-cream-50 focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
                             placeholder="example@email.com"
                         />
                     </div>
@@ -78,9 +78,9 @@ const Contact: React.FC = () => {
                     <div className="mb-6">
                         <label
                             htmlFor="message"
-                            className="block text-gray-700 font-semibold mb-2"
+                            className="block text-brown-800 font-semibold mb-2"
                         >
-                            メッセージ <span className="text-red-500">*</span>
+                            メッセージ <span className="text-red-600">*</span>
                         </label>
                         <textarea
                             id="message"
@@ -89,26 +89,26 @@ const Contact: React.FC = () => {
                             value={formData.message}
                             onChange={handleChange}
                             rows={6}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
+                            className="w-full px-4 py-3 border border-sand-300 rounded-lg bg-cream-50 focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent resize-none"
                             placeholder="お問い合わせ内容をご記入ください"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+                        className="w-full px-8 py-4 bg-brown-800 text-cream-50 font-semibold rounded-full hover:bg-brown-900 transition-colors shadow-lg"
                     >
                         送信する
                     </button>
                 </form>
 
                 <div className="mt-8 text-center">
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-brown-600 mb-4">
                         または、直接メールでご連絡ください
                     </p>
                     <a
                         href={`mailto:${profile.email}`}
-                        className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+                        className="text-brown-800 hover:text-brown-900 font-semibold text-lg"
                     >
                         {profile.email}
                     </a>

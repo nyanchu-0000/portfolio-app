@@ -4,23 +4,23 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-gray-900 text-white py-12">
-            <div className="container mx-auto px-4 max-w-6xl">
+        <footer className="bg-brown-900 text-cream-100 py-12">
+            <div className="container mx-auto px-6 md:px-12 max-w-7xl">
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Portfolio</h3>
-                        <p className="text-gray-400">
+                        <h3 className="text-xl font-bold mb-4 text-cream-50">Portfolio</h3>
+                        <p className="text-cream-300 text-sm">
                             フロントエンドエンジニア / デザイナー
                         </p>
                     </div>
 
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Links</h3>
+                        <h3 className="text-xl font-bold mb-4 text-cream-50">Links</h3>
                         <ul className="space-y-2">
                             <li>
                                 <a
                                     href="#about"
-                                    className="text-gray-400 hover:text-white transition-colors"
+                                    className="text-cream-300 hover:text-cream-50 transition-colors text-sm"
                                 >
                                     About
                                 </a>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                             <li>
                                 <a
                                     href="#works"
-                                    className="text-gray-400 hover:text-white transition-colors"
+                                    className="text-cream-300 hover:text-cream-50 transition-colors text-sm"
                                 >
                                     Works
                                 </a>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                             <li>
                                 <a
                                     href="#contact"
-                                    className="text-gray-400 hover:text-white transition-colors"
+                                    className="text-cream-300 hover:text-cream-50 transition-colors text-sm"
                                 >
                                     Contact
                                 </a>
@@ -45,13 +45,13 @@ const Footer: React.FC = () => {
                     </div>
 
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Social</h3>
+                        <h3 className="text-xl font-bold mb-4 text-cream-50">Social</h3>
                         <div className="flex gap-4">
                             <a
                                 href="https://github.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-cream-300 hover:text-cream-50 transition-colors"
                                 aria-label="GitHub"
                             >
                                 <svg
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                                 href="https://twitter.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-cream-300 hover:text-cream-50 transition-colors"
                                 aria-label="Twitter"
                             >
                                 <svg
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                                 href="https://linkedin.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-cream-300 hover:text-cream-50 transition-colors"
                                 aria-label="LinkedIn"
                             >
                                 <svg
@@ -96,8 +96,8 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-                    <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
+                <div className="border-t border-brown-800 pt-8 text-center text-cream-300">
+                    <p className="text-sm">&copy; {currentYear} Portfolio. All rights reserved.</p>
                 </div>
             </div>
         </footer>
