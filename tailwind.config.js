@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    theme: {
+        extend: {
+            colors: {
+                cream: {
+                    50: "#fdfcfb",
+                    100: "#faf8f5",
+                    200: "#f5f1eb",
+                    300: "#ebe5dc",
+                    400: "#ddd4c7",
+                    500: "#cfc3b3",
+                    600: "#b8a897",
+                    700: "#9d8c7a",
+                    800: "#7d6f5f",
+                    900: "#5c5248",
+                },
+                sand: {
+                    50: "#faf9f7",
+                    100: "#f4f2ed",
+                    200: "#e8e4db",
+                    300: "#d9d3c6",
+                    400: "#c7bfaf",
+                    500: "#b3a898",
+                    600: "#9a8d7d",
+                    700: "#7f7365",
+                    800: "#645b50",
+                    900: "#4a443c",
+                },
+                brown: {
+                    50: "#f9f7f4",
+                    100: "#f0ebe4",
+                    200: "#dfd5c8",
+                    300: "#c9baaa",
+                    400: "#b09d8a",
+                    500: "#96816d",
+                    600: "#7d6858",
+                    700: "#655347",
+                    800: "#4e4139",
+                    900: "#3a322c",
+                },
+            },
+            fontFamily: {
+                sans: [
+                    "Inter",
+                    "Noto Sans JP",
+                    "Hiragino Kaku Gothic ProN",
+                    "Hiragino Sans",
+                    "Yu Gothic",
+                    "Meiryo",
+                    "system-ui",
+                    "sans-serif",
+                ],
+                serif: [
+                    "Noto Serif JP",
+                    "Yu Mincho",
+                    "YuMincho",
+                    "Hiragino Mincho ProN",
+                    "serif",
+                ],
+            },
+        },
+    },
+    plugins: [],
+};

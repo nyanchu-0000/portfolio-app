@@ -1,0 +1,30 @@
+import React from "react";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Hero from "./components/sections/Hero";
+import AboutMe from "./components/sections/AboutMe";
+import Skills from "./components/sections/Skills";
+import Works from "./components/sections/Works";
+import Qualifications from "./components/sections/Qualifications";
+import Career from "./components/sections/Career";
+import Contact from "./components/sections/Contact";
+
+function App() {
+    return (
+        <div className="min-h-screen">
+            <Header />
+            <main>
+                <Hero />
+                <AboutMe />
+                <Skills />
+                <Works />
+                <Qualifications />
+                <Career />
+                <Contact />
+            </main>
+            <Footer />
+        </div>
+    );
+}
+
+export default App;
