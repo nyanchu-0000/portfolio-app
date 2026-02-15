@@ -13,6 +13,16 @@ const Hero: React.FC = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-sand-200/30 to-transparent"></div>
             </div>
 
+            {/* Bird image on the right */}
+            <div className="absolute right-12 top-1/2 transform -translate-y-[30%] hidden lg:block">
+                <img 
+                    src="/bird.png" 
+                    alt="Bird illustration" 
+                    className="w-[40rem] h-auto opacity-90 animate-fade-in"
+                    style={{ animationDelay: "0.6s" }}
+                />
+            </div>
+
             <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <div className="max-w-3xl">
                     <div className="mb-8 animate-fade-in">
@@ -26,7 +36,10 @@ const Hero: React.FC = () => {
                         </h1>
                     </div>
 
-                    <div className="mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                    <div
+                        className="mb-12 animate-fade-in"
+                        style={{ animationDelay: "0.2s" }}
+                    >
                         <p className="text-base md:text-lg text-brown-700 leading-relaxed mb-4">
                             色をみつけ、色を育て、色をみつめる。
                         </p>
@@ -41,7 +54,10 @@ const Hero: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                    <div
+                        className="animate-fade-in"
+                        style={{ animationDelay: "0.4s" }}
+                    >
                         <a
                             href="#works"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-brown-800 text-cream-50 font-medium rounded-full hover:bg-brown-900 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -66,7 +82,9 @@ const Hero: React.FC = () => {
             {/* Scroll indicator */}
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs text-brown-600 tracking-wider">SCROLL</span>
+                    <span className="text-xs text-brown-600 tracking-wider">
+                        SCROLL
+                    </span>
                     <div className="w-px h-12 bg-brown-400"></div>
                 </div>
             </div>
