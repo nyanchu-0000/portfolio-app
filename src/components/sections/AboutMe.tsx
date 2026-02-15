@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
                     {/* Left side - Text content */}
                     <div>
                         <h3 className="text-3xl md:text-4xl font-bold mb-6 text-brown-900 leading-tight">
-                            banana
+                            Hello World
                         </h3>
 
                         <div className="space-y-4 text-brown-700">
