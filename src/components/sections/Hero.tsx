@@ -15,9 +15,9 @@ const Hero: React.FC = () => {
 
             {/* Bird image on the right */}
             <div className="absolute right-12 top-1/2 transform -translate-y-[30%] hidden lg:block">
-                <img 
-                    src="/bird.png" 
-                    alt="Bird illustration" 
+                <img
+                    src="/bird.png"
+                    alt="Bird illustration"
                     className="w-[40rem] h-auto opacity-90 animate-fade-in"
                     style={{ animationDelay: "0.6s" }}
                 />
@@ -26,15 +26,17 @@ const Hero: React.FC = () => {
             <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <div className="max-w-3xl">
                     <div className="mb-8 animate-fade-in">
-
-                        <div className="max-w-xl mb-6 overflow-hidden" style={{ marginLeft: '-1.5rem' }}>
-                            <img 
-                                src="/yui-gamo-logo.png" 
-                                alt="Yui Gamo" 
+                        <div
+                            className="max-w-xl mb-6 overflow-hidden"
+                            style={{ marginLeft: "-1.5rem" }}
+                        >
+                            <img
+                                src="/yui-gamo-logo.png"
+                                alt="Yui Gamo"
                                 className="block w-full"
-                                style={{ 
-                                    clipPath: 'inset(0 3% 0 3%)',
-                                    transform: 'scale(1.065)'
+                                style={{
+                                    clipPath: "inset(0 3% 0 3%)",
+                                    transform: "scale(1.065)",
                                 }}
                             />
                         </div>
@@ -45,16 +47,9 @@ const Hero: React.FC = () => {
                         style={{ animationDelay: "0.2s" }}
                     >
                         <p className="text-base md:text-lg text-brown-700 leading-relaxed mb-4">
-                            色をみつけ、色を育て、色をみつめる。
-                        </p>
-                        <p className="text-base md:text-lg text-brown-700 leading-relaxed mb-4">
-                            色をみつけ、色を育て、色をみつめる。
-                        </p>
-                        <p className="text-base md:text-lg text-brown-700 leading-relaxed mb-4">
-                            色をみつけ、色を育て、色をみつめる。
-                        </p>
-                        <p className="text-base md:text-lg text-brown-700 leading-relaxed">
-                            色をみつけ、色を育て、色をみつめる。
+                            I am an frontend engineer based in Tokyo. Born in
+                            Kanagawa. Graduate from Art University Japanese
+                            Painting institute.
                         </p>
                     </div>
 
