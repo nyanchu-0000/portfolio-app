@@ -1,6 +1,5 @@
 import React from "react";
 import Section from "../common/Section";
-import { profile } from "../../data/profile";
 
 const AboutMe: React.FC = () => {
     return (
