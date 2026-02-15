@@ -10,23 +10,12 @@ const AboutMe: React.FC = () => {
                     {/* Left side - Text content */}
                     <div>
                         <h3 className="text-3xl md:text-4xl font-bold mb-6 text-brown-900 leading-tight">
-                            色を見つけ、
-                            <br />
-                            色をかがやかせる。
+                            banana
                         </h3>
 
                         <div className="space-y-4 text-brown-700">
                             <p className="leading-relaxed">
-                                色をみつけ、色を育て、色をみつめる。
-                            </p>
-                            <p className="leading-relaxed">
-                                色をみつけ、色を育て、色をみつめる。
-                            </p>
-                            <p className="leading-relaxed">
-                                色をみつけ、色を育て、色をみつめる。
-                            </p>
-                            <p className="leading-relaxed">
-                                色をみつけ、色を育て、色をみつめる。
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur animi sequi earum assumenda quasi blanditiis exercitationem vitae est perferendis possimus? Molestias fugiat laborum numquam earum, exercitationem veniam obcaecati placeat tenetur.
                             </p>
                         </div>
 

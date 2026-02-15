@@ -18,7 +18,6 @@ const Header: React.FC = () => {
         { href: "#works", label: "Works" },
         { href: "#qualifications", label: "Qualifications" },
         { href: "#career", label: "Career" },
-        { href: "#contact", label: "Contact" },
     ];
 
     const handleNavClick = (

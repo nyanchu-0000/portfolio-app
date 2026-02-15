@@ -1,5 +1,4 @@
 import React from "react";
-import { profile } from "../../data/profile";
 
 const Hero: React.FC = () => {
     return (
@@ -47,9 +46,10 @@ const Hero: React.FC = () => {
                         style={{ animationDelay: "0.2s" }}
                     >
                         <p className="text-base md:text-lg text-brown-700 leading-relaxed mb-4">
-                            I am an frontend engineer based in Tokyo. Born in
-                            Kanagawa. Graduate from Art University Japanese
-                            Painting institute.
+                            I am a frontend engineer based in Tokyo.
+                            <br />
+                            Born in Kanagawa. Graduated from the Japanese
+                            Painting Department at an Art University.
                         </p>
                     </div>
 
