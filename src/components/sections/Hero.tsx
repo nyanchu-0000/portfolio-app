@@ -26,14 +26,18 @@ const Hero: React.FC = () => {
             <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <div className="max-w-3xl">
                     <div className="mb-8 animate-fade-in">
-                        <p className="text-sm md:text-base text-brown-600 mb-4 tracking-wider uppercase font-medium">
-                            Portfolio 2026
-                        </p>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-brown-900 leading-tight">
-                            色を見つけ、
-                            <br />
-                            色をかがやかせる。
-                        </h1>
+
+                        <div className="max-w-xl mb-6 overflow-hidden" style={{ marginLeft: '-1.5rem' }}>
+                            <img 
+                                src="/yui-gamo-logo.png" 
+                                alt="Yui Gamo" 
+                                className="block w-full"
+                                style={{ 
+                                    clipPath: 'inset(0 3% 0 3%)',
+                                    transform: 'scale(1.065)'
+                                }}
+                            />
+                        </div>
                     </div>
 
                     <div
