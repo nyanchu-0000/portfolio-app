@@ -7,7 +7,7 @@ export const careerItems: CareerItem[] = [
         company: "Webサイト運用・保守",
         position: "フロントエンドエンジニア",
         description:
-            "React/Next.jsを用いたWebアプリケーション開発。UI/UXの設計・実装を担当。アクセシビリティやパフォーマンス最適化にも注力。",
+            "大手金融機関のWebサイト運用・保守。React/TypeScriptを用いたWebアプリケーション開発。UI/UXの設計・実装を担当。アクセシビリティやUI改善にも注力。",
     },
     {
         id: "career-2",

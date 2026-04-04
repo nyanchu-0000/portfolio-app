@@ -3,18 +3,18 @@ import type { Work } from "../types/index";
 export const engineeringWorks: Work[] = [
     {
         id: "eng-1",
-        title: "ECサイト構築プロジェクト",
+        title: "恐竜図鑑",
         description:
-            "Next.jsとStripeを使用したフルスタックECサイト。商品管理、決済、注文管理機能を実装。",
-        imageUrl: "/images/works/ec-site.jpg",
+            "ReactとTypeScriptを使用した恐竜紹介図鑑サイト。画像はGemini、ImageFX、Hailuo AIなどの生成AIツールで制作。",
+        imageUrl: "/images/works/dinosaur-dictionary.png",
         technologies: [
-            "Next.js",
+            "React",
             "TypeScript",
-            "Stripe",
-            "Tailwind CSS",
-            "PostgreSQL",
+            "Gemini (AI)",
+            "ImageFX (AI)",
+            "Hailuo AI (AI)",
         ],
-        link: "https://example.com",
+        link: "https://dinosaur-dictionary-app.vercel.app/",
         github: "https://github.com/username/ec-site",
         category: "engineering",
     },
@@ -44,10 +44,11 @@ export const engineeringWorks: Work[] = [
 export const designWorks: Work[] = [
     {
         id: "design-1",
-        title: "ブランディングデザイン",
+        title: "就活ESチェッカー",
         description:
-            "スタートアップ企業のブランディング一式。ロゴ、名刺、Webデザインを制作。",
-        imageUrl: "/images/works/branding.jpg",
+            "作成した文章を入力するだけで高性能AIが添削＆最適化。文字数調整も可能で、短時間で就活を有利に進められます。",
+        imageUrl: "/images/works/es-checker.png",
+        link: "/works/es-checker",
         category: "design",
     },
     {

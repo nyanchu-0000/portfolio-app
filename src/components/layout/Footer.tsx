@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-cream-50">Portfolio</h3>
                         <p className="text-cream-300 text-sm">
-                            フロントエンドエンジニア / デザイナー
+                            フロントエンドエンジニア
                         </p>
                     </div>
 
