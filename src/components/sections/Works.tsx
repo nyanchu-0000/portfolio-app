@@ -1,62 +1,94 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Section from "../common/Section";
 import WorkCard from "../common/WorkCard";
-import { engineeringWorks, designWorks, artWorks } from "../../data/works";
+import { engineeringWorks, designWorks } from "../../data/works";
 
-type WorkCategory = "engineering" | "design" | "art";
+interface SliderRowProps {
+    title: string;
+    works: typeof engineeringWorks;
+}
+
+const SliderRow: React.FC<SliderRowProps> = ({ title, works }) => {
+    const trackRef = useRef<HTMLDivElement>(null);
+    const [current, setCurrent] = useState(0);
+    const [cardWidth, setCardWidth] = useState(0);
+    const total = works.length;
+
+    useEffect(() => {
+        const updateWidth = () => {
+            if (trackRef.current) {
+                const card = trackRef.current.querySelector<HTMLElement>(".work-card-item");
+                if (card) setCardWidth(card.offsetWidth + 32);
+            }
+        };
+        updateWidth();
+        window.addEventListener("resize", updateWidth);
+        return () => window.removeEventListener("resize", updateWidth);
+    }, [works]);
+
+    const goTo = (index: number) => {
+        const clamped = Math.max(0, Math.min(index, total - 1));
+        setCurrent(clamped);
+        if (trackRef.current && cardWidth > 0) {
+            trackRef.current.scrollTo({ left: clamped * cardWidth, behavior: "smooth" });
+        }
+    };
+
+    const handleScroll = () => {
+        if (trackRef.current && cardWidth > 0) {
+            const index = Math.round(trackRef.current.scrollLeft / cardWidth);
+            setCurrent(index);
+        }
+    };
+
+    return (
+        <div className="mb-16">
+            <h3 className="text-xl font-bold text-brown-900 mb-6 px-2">{title}</h3>
+
+            <div
+                ref={trackRef}
+                onScroll={handleScroll}
+                className="flex gap-8 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+                style={{ scrollbarWidth: "none" }}
+            >
+                {works.map((work) => (
+                    <div
+                        key={work.id}
+                        className="work-card-item flex-shrink-0 w-72 md:w-80 snap-start"
+                    >
+                        <WorkCard work={work} />
+                    </div>
+                ))}
+            </div>
+
+            {/* Dot indicators */}
+            <div className="flex justify-center gap-2 mt-4">
+                {works.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => goTo(i)}
+                        className={`rounded-full transition-all duration-300 ${
+                            i === current
+                                ? "w-6 h-2 bg-brown-800"
+                                : "w-2 h-2 bg-sand-300 hover:bg-sand-400"
+                        }`}
+                        aria-label={`${i + 1}件目に移動`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
 
 const Works: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<WorkCategory>("engineering");
-
-    const tabs = [
-        {
-            id: "engineering" as WorkCategory,
-            label: "Engineering",
-            works: engineeringWorks,
-        },
-        { id: "design" as WorkCategory, label: "Design", works: designWorks },
-        { id: "art" as WorkCategory, label: "Art", works: artWorks },
-    ];
-
-    const currentWorks = tabs.find((tab) => tab.id === activeTab)?.works || [];
-
     return (
         <Section id="works" title="WORKS" className="bg-cream-100">
             <div className="text-center mb-12">
                 <p className="text-brown-700 text-lg">制作実績</p>
             </div>
 
-            {/* Tab Navigation */}
-            <div className="flex justify-center mb-12 gap-4 flex-wrap">
-                {tabs.map((tab) => (
-                    <button
-                        key={tab.id}
-                        onClick={() => setActiveTab(tab.id)}
-                        className={`px-6 py-3 rounded-full font-medium transition-all ${
-                            activeTab === tab.id
-                                ? "bg-brown-800 text-cream-50 shadow-lg"
-                                : "bg-cream-50 text-brown-700 hover:bg-sand-100 border border-sand-300"
-                        }`}
-                    >
-                        {tab.label}
-                    </button>
-                ))}
-            </div>
-
-            {/* Works Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {currentWorks.map((work) => (
-                    <WorkCard key={work.id} work={work} />
-                ))}
-            </div>
-
-            {currentWorks.length === 0 && (
-                <div className="text-center py-12">
-                    <p className="text-brown-500 text-lg">
-                        作品はまだありません
-                    </p>
-                </div>
-            )}
+            <SliderRow title="Engineering" works={engineeringWorks} />
+            <SliderRow title="Design" works={designWorks} />
         </Section>
     );
 };
