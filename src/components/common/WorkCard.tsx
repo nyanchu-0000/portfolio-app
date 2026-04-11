@@ -23,8 +23,13 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
                 <div className="absolute inset-0 bg-brown-900/0 group-hover:bg-brown-900/10 transition-colors duration-300"></div>
             </div>
             <div className="p-6 flex flex-col">
-                <h3 className="text-lg font-bold mb-2 text-brown-900 group-hover:text-brown-800 transition-colors">
+                <h3 className="text-lg font-bold mb-2 text-brown-900 group-hover:text-brown-800 transition-colors flex flex-wrap items-center gap-2">
                     {work.title}
+                    {work.isCollaborative && (
+                        <span className="text-xs font-medium px-2 py-0.5 bg-sand-200 text-brown-600 rounded-full">
+                            共同開発
+                        </span>
+                    )}
                 </h3>
                 <p className="text-brown-600 text-sm mb-4 leading-relaxed">
                     {work.description}

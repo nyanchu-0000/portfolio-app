@@ -4,17 +4,6 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
 const ESCheckerDetail: React.FC = () => {
-    const handleFullscreen = () => {
-        const videoContainer = document.getElementById("video-container");
-        if (videoContainer) {
-            if (!document.fullscreenElement) {
-                videoContainer.requestFullscreen();
-            } else {
-                document.exitFullscreen();
-            }
-        }
-    };
-
     return (
         <div className="min-h-screen bg-cream-100">
             <Header />
@@ -50,43 +39,24 @@ const ESCheckerDetail: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Video Section */}
-                <section className="py-16 bg-cream-50">
-                    <div className="max-w-6xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-brown-900 mb-8 text-center">
-                            デモ動画
-                        </h2>
-                        <div
-                            id="video-container"
-                            className="relative bg-sand-200 rounded-lg overflow-hidden shadow-xl"
-                        >
-                            <div className="aspect-video">
-                                <video
-                                    controls
-                                    className="w-full h-full object-cover"
-                                    poster="/images/works/es-checker.png"
-                                >
-                                    <source src="/videos/es-checker-demo.mp4" type="video/mp4" />
-                                    お使いのブラウザは動画タグをサポートしていません。
-                                </video>
+                {/* Mockup Showcase Section */}
+                <section className="pt-8 pb-20 bg-cream-100">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+                            <div className="flex justify-center">
+                                <img
+                                    src="/images/projects/es-checker/Group 22.png"
+                                    alt="就活ESチェッカー デスクトップ画面"
+                                    className="w-full max-w-xl"
+                                />
                             </div>
-                            <button
-                                onClick={handleFullscreen}
-                                className="absolute top-4 right-4 bg-brown-800/80 hover:bg-brown-900/90 text-cream-50 p-3 rounded-lg transition-colors"
-                                title="全画面表示"
-                            >
-                                <svg
-                                    className="w-6 h-6"
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
-                                </svg>
-                            </button>
+                            <div className="flex justify-center">
+                                <img
+                                    src="/images/projects/es-checker/Group 23.png"
+                                    alt="就活ESチェッカー ラップトップ画面"
+                                    className="w-full max-w-xl"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -98,33 +68,30 @@ const ESCheckerDetail: React.FC = () => {
                             制作のポイント
                         </h2>
 
-                        {/* Feature 1: Design Concept */}
+                        {/* Feature 1: Design Comp */}
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    デザインコンセプト
+                                    デザインカンプ
                                 </h3>
+                                <p className="text-brown-700 mb-2 leading-relaxed">
+                                    全ページのデザイン案をFigmaで作成。
+                                </p>
+                                <h4 className="text-lg font-bold text-brown-900 mb-2">
+                                    デザインコンセプト
+                                </h4>
                                 <p className="text-brown-700 mb-6 leading-relaxed">
                                     就活生が使いやすいよう、シンプルで直感的なUIを心がけました。
                                     落ち着いたカラーパレットで長時間使用しても目が疲れにくいデザインです。
                                 </p>
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="flex justify-center">
                                     <img
                                         src="/images/projects/es-checker/screenshot1.png"
-                                        alt="デザインコンセプト"
-                                        className="w-full rounded-lg shadow-md"
+                                        alt="デザインカンプ"
+                                        className="w-full max-w-3xl rounded-lg shadow-md"
                                         onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src =
-                                                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%23d9d3c6" width="600" height="400"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="20"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                        }}
-                                    />
-                                    <img
-                                        src="/images/projects/es-checker/screenshot2.png"
-                                        alt="UI詳細"
-                                        className="w-full rounded-lg shadow-md"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
+                                            const target =
+                                                e.target as HTMLImageElement;
                                             target.src =
                                                 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="600" height="400"%3E%3Crect fill="%23d9d3c6" width="600" height="400"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="20"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
                                         }}
@@ -148,11 +115,15 @@ const ESCheckerDetail: React.FC = () => {
                                         />
                                     </div>
                                     <div>
+                                        <p className="text-brown-600 text-base mb-3">
+                                            使用ツール：Illustrator
+                                        </p>
                                         <p className="text-brown-700 leading-relaxed text-sm">
                                             信頼性と親しみやすさを両立したロゴデザイン。
                                             「ES（エントリーシート）」と「チェック」の要素を組み合わせ、
                                             就活生にとって頼れる存在であることを表現しました。
                                             ブルーを基調とした配色で、清潔感と安心感を演出しています。
+                                            チェックの先端を矢印にすることで、より良いものに向上するという意味を持たせています。
                                         </p>
                                     </div>
                                 </div>
@@ -163,43 +134,39 @@ const ESCheckerDetail: React.FC = () => {
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    技術的な工夫
+                                    自己PR添削
                                 </h3>
-                                <p className="text-brown-700 mb-6 leading-relaxed">
-                                    高性能なAI APIを活用し、リアルタイムでの文章添削を実現。
-                                    レスポンシブデザインで、スマートフォンからでも快適に利用できます。
+                                <p className="text-brown-700 mb-8 leading-relaxed">
+                                    現在の職業・学習状況や希望する雇用形態、文字数といった条件を
+                                    <strong className="text-brown-900">
+                                        ボタンひとつで簡単に選択
+                                    </strong>
+                                    できるUIを実装。
+                                    あとは作成済みの自己PR文章を貼り付けるだけで、AIが状況に合わせた添削・最適化を自動で行います。
+                                    入力の手間を最小限に抑えながら、就活生一人ひとりに寄り添ったフィードバックを届けられる仕組みを意識して設計しました。
                                 </p>
-                                <div className="grid md:grid-cols-3 gap-6">
-                                    <img
-                                        src="/images/projects/es-checker/process1.png"
-                                        alt="制作過程1"
-                                        className="w-full rounded-lg shadow-md"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src =
-                                                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                        }}
-                                    />
-                                    <img
-                                        src="/images/projects/es-checker/process2.png"
-                                        alt="制作過程2"
-                                        className="w-full rounded-lg shadow-md"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src =
-                                                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                        }}
-                                    />
-                                    <img
-                                        src="/images/projects/es-checker/process3.png"
-                                        alt="制作過程3"
-                                        className="w-full rounded-lg shadow-md"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src =
-                                                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                        }}
-                                    />
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            入力画面 — 条件選択 &amp; 文章入力
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-input.png"
+                                            alt="入力画面：条件選択と文章入力"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            添削結果画面 — コメント &amp;
+                                            改善ポイント
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-result.png"
+                                            alt="添削結果画面：コメントと改善ポイント"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -208,22 +175,84 @@ const ESCheckerDetail: React.FC = () => {
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    ユーザー体験の最適化
+                                    自己PR採点
                                 </h3>
-                                <p className="text-brown-700 mb-6 leading-relaxed">
-                                    複数の就活生にテストしてもらい、フィードバックを基に改善を重ねました。
-                                    特に文字数調整機能は高く評価されています。
+                                <p className="text-brown-700 mb-8 leading-relaxed">
+                                    作成した文章を貼り付けるだけで、AIが自動で採点。
+                                    「具体性」「一貫性」「差別化」「熱意・モチベーション」「成果・影響力」の
+                                    <strong className="text-brown-900">
+                                        5つの評価軸
+                                    </strong>
+                                    をレーダーチャートでグラフ化し、
+                                    それぞれの項目について具体的なフィードバックをわかりやすく返してくれます。
+                                    自分の文章のどこが強く、どこを伸ばすべきかが一目で把握できる体験を目指しました。
                                 </p>
-                                <img
-                                    src="/images/projects/es-checker/feedback.png"
-                                    alt="ユーザーフィードバック"
-                                    className="w-full rounded-lg shadow-md"
-                                    onError={(e) => {
-                                        const target = e.target as HTMLImageElement;
-                                        target.src =
-                                            'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="400"%3E%3Crect fill="%23d9d3c6" width="800" height="400"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="20"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                    }}
-                                />
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            採点画面 — 文章入力 &amp; 採点ボタン
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-score-input.png"
+                                            alt="採点画面：文章入力と採点ボタン"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            採点結果画面 — レーダーチャート
+                                            &amp; 項目別FB
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-score-result.png"
+                                            alt="採点結果画面：レーダーチャートと項目別フィードバック"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 5: PR Creation */}
+                        <div className="mb-16">
+                            <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
+                                <h3 className="text-2xl font-bold text-brown-900 mb-4">
+                                    自己PR作成
+                                </h3>
+                                <p className="text-brown-700 mb-8 leading-relaxed">
+                                    志望する業界・職種やアピールしたい強み・特技を入力すると、
+                                    その内容をもとに
+                                    <strong className="text-brown-900">
+                                        AIが自己PRを自動で作成
+                                    </strong>
+                                    します。
+                                    文字数はボタンからかんたんに選択でき、選んだ文字数にぴったり合わせた
+                                    自己PRを即座に生成。ゼロから文章を考える手間を省き、
+                                    あとは内容を確認・調整するだけで質の高い自己PRが完成します。
+                                </p>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            作成画面 — 業界・強み入力 &amp;
+                                            文字数選択
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-create-input.png"
+                                            alt="作成画面：業界・強み入力と文字数選択"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
+                                            作成結果画面 — AI生成テキスト
+                                        </p>
+                                        <img
+                                            src="/images/projects/es-checker/screenshot-create-result.png"
+                                            alt="作成結果画面：AI生成テキスト"
+                                            className="w-full rounded-lg shadow-md"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -235,17 +264,46 @@ const ESCheckerDetail: React.FC = () => {
                         <h2 className="text-3xl font-bold text-brown-900 mb-8 text-center">
                             使用技術
                         </h2>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {["Next.js", "TypeScript", "Tailwind CSS", "OpenAI API", "Vercel"].map(
-                                (tech) => (
+                        <div className="mb-8">
+                            <h3 className="text-sm font-semibold text-brown-600 uppercase tracking-widest mb-4 text-center">
+                                デザインツール
+                            </h3>
+                            <div className="flex flex-wrap justify-center gap-4 mb-8">
+                                {["Illustrator", "Figma"].map((tool) => (
+                                    <span
+                                        key={tool}
+                                        className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
+                                    >
+                                        {tool}
+                                    </span>
+                                ))}
+                            </div>
+                            <div className="border-t border-sand-300 mb-8" />
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {[
+                                    "Next.js",
+                                    "TypeScript",
+                                    "Tailwind CSS",
+                                    "OpenAI API",
+                                    "Vercel",
+                                ].map((tech) => (
                                     <span
                                         key={tech}
                                         className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
                                     >
                                         {tech}
                                     </span>
-                                )
-                            )}
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex justify-center mt-8">
+                            <div className="inline-flex flex-col items-center gap-1 text-sm text-brown-600">
+                                <span className="font-semibold text-brown-800">共同開発</span>
+                                <div className="flex gap-6">
+                                    <span>Des：自身が担当</span>
+                                    <span>Eng：1名</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

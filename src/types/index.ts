@@ -7,6 +7,7 @@ export interface Work {
     link?: string;
     github?: string;
     category: "engineering" | "design" | "art";
+    isCollaborative?: boolean;
 }
 
 export interface Skill {

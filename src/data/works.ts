@@ -50,6 +50,7 @@ export const designWorks: Work[] = [
         imageUrl: "/images/works/es-checker.png",
         link: "/works/es-checker",
         category: "design",
+        isCollaborative: true,
     },
     {
         id: "design-2",
