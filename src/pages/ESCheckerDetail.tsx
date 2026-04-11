@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
 const ESCheckerDetail: React.FC = () => {
-    const [isVideoFullscreen, setIsVideoFullscreen] = useState(false);
-
     const handleFullscreen = () => {
         const videoContainer = document.getElementById("video-container");
         if (videoContainer) {
             if (!document.fullscreenElement) {
                 videoContainer.requestFullscreen();
-                setIsVideoFullscreen(true);
             } else {
                 document.exitFullscreen();
-                setIsVideoFullscreen(false);
             }
         }
     };
