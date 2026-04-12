@@ -100,6 +100,26 @@ const ESCheckerDetail: React.FC = () => {
                             </div>
                         </div>
 
+                        {/* Feature 1b: Design Comp Mobile */}
+                        <div className="mb-16">
+                            <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
+                                <h3 className="text-2xl font-bold text-brown-900 mb-4">
+                                    メインビジュアル
+                                </h3>
+                                <p className="text-brown-700 mb-2 leading-relaxed">
+                                    Photoshop、Illustratorを用いてメインビジュアルを作成。
+                                    写真素材の色調補正・合成はPhotoshopで行い、ロゴやテキスト要素のベクター描画はIllustratorで仕上げました。
+                                </p>
+                                <div className="flex justify-center">
+                                    <img
+                                        src="/images/projects/es-checker/Frame 6.png"
+                                        alt="スマートフォン対応デザインカンプ"
+                                        className="w-full max-w-3xl rounded-lg shadow-md"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Feature 2: Logo */}
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-6 shadow-lg border border-sand-200">
@@ -119,11 +139,8 @@ const ESCheckerDetail: React.FC = () => {
                                             使用ツール：Illustrator
                                         </p>
                                         <p className="text-brown-700 leading-relaxed text-sm">
-                                            信頼性と親しみやすさを両立したロゴデザイン。
-                                            「ES（エントリーシート）」と「チェック」の要素を組み合わせ、
-                                            就活生にとって頼れる存在であることを表現しました。
-                                            ブルーを基調とした配色で、清潔感と安心感を演出しています。
-                                            チェックの先端を矢印にすることで、より良いものに向上するという意味を持たせています。
+                                            就活という真剣な場面に寄り添えるよう、清潔感と誠実さを感じさせるビジュアルを意識。
+                                            ユーザーが初めて目にした瞬間に「信頼できるサービス」と直感できるデザインを目指しました。
                                         </p>
                                     </div>
                                 </div>
@@ -269,14 +286,16 @@ const ESCheckerDetail: React.FC = () => {
                                 デザインツール
                             </h3>
                             <div className="flex flex-wrap justify-center gap-4 mb-8">
-                                {["Illustrator", "Figma"].map((tool) => (
-                                    <span
-                                        key={tool}
-                                        className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
-                                    >
-                                        {tool}
-                                    </span>
-                                ))}
+                                {["Illustrator", "Photoshop", "Figma"].map(
+                                    (tool) => (
+                                        <span
+                                            key={tool}
+                                            className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
+                                        >
+                                            {tool}
+                                        </span>
+                                    ),
+                                )}
                             </div>
                             <div className="border-t border-sand-300 mb-8" />
                             <div className="flex flex-wrap justify-center gap-4">
@@ -298,7 +317,9 @@ const ESCheckerDetail: React.FC = () => {
                         </div>
                         <div className="flex justify-center mt-8">
                             <div className="inline-flex flex-col items-center gap-1 text-sm text-brown-600">
-                                <span className="font-semibold text-brown-800">共同開発</span>
+                                <span className="font-semibold text-brown-800">
+                                    共同開発
+                                </span>
                                 <div className="flex gap-6">
                                     <span>Des：自身が担当</span>
                                     <span>Eng：1名</span>

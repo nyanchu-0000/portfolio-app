@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Work } from "../../types/index";
 
@@ -7,6 +7,18 @@ interface WorkCardProps {
 }
 
 const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleExternalClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setShowModal(true);
+    };
+
+    const handleConfirm = () => {
+        setShowModal(false);
+        window.open(work.link!, "_blank", "noopener,noreferrer");
+    };
+
     const CardContent = (
         <>
             <div className="aspect-[4/3] bg-sand-200 relative overflow-hidden">
@@ -66,14 +78,47 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         }
 
         return (
-            <a
-                href={work.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col h-full"
-            >
-                {CardContent}
-            </a>
+            <>
+                <a
+                    href={work.link}
+                    onClick={handleExternalClick}
+                    className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col h-full"
+                >
+                    {CardContent}
+                </a>
+
+                {showModal && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-brown-900/40 backdrop-blur-sm">
+                        <div className="bg-cream-50 rounded-xl shadow-2xl border border-sand-200 p-8 max-w-sm w-full mx-4">
+                            <div className="flex items-center gap-3 mb-4">
+                                <svg className="w-6 h-6 text-brown-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                <h3 className="text-lg font-bold text-brown-900">
+                                    外部サイトへ移動します
+                                </h3>
+                            </div>
+                            <p className="text-brown-700 text-sm leading-relaxed mb-6">
+                                別タブで外部サイトを開きます。よろしいですか？
+                            </p>
+                            <div className="flex gap-3 justify-end">
+                                <button
+                                    onClick={() => setShowModal(false)}
+                                    className="px-5 py-2 rounded-lg text-sm font-medium text-brown-700 bg-sand-200 hover:bg-sand-300 transition-colors"
+                                >
+                                    キャンセル
+                                </button>
+                                <button
+                                    onClick={handleConfirm}
+                                    className="px-5 py-2 rounded-lg text-sm font-medium text-cream-50 bg-brown-800 hover:bg-brown-900 transition-colors"
+                                >
+                                    開く
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </>
         );
     }
 
