@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,15 +41,15 @@ const Header: React.FC = () => {
         >
             <div className="container mx-auto px-6 md:px-12 max-w-7xl">
                 <nav className="flex items-center justify-between">
-                    <a
-                        href="#hero"
-                        onClick={(e) => handleNavClick(e, "#hero")}
+                    <Link
+                        to="/"
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         className={`text-xl md:text-2xl font-semibold transition-colors ${
                             isScrolled ? "text-brown-900" : "text-brown-800"
                         }`}
                     >
                         Portfolio
-                    </a>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <ul className="hidden md:flex items-center gap-8">
