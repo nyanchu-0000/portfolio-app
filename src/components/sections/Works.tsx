@@ -54,7 +54,7 @@ const SliderRow: React.FC<SliderRowProps> = ({ title, works }) => {
                 {works.map((work) => (
                     <div
                         key={work.id}
-                        className="work-card-item flex-shrink-0 w-72 md:w-80 snap-start"
+                        className="work-card-item flex-shrink-0 w-72 md:w-80 snap-start h-[480px] flex flex-col"
                     >
                         <WorkCard work={work} />
                     </div>

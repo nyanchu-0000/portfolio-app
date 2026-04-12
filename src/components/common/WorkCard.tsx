@@ -22,7 +22,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
                 />
                 <div className="absolute inset-0 bg-brown-900/0 group-hover:bg-brown-900/10 transition-colors duration-300"></div>
             </div>
-            <div className="p-6 flex flex-col">
+            <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-lg font-bold mb-2 text-brown-900 group-hover:text-brown-800 transition-colors flex flex-wrap items-center gap-2">
                     {work.title}
                     {work.isCollaborative && (
@@ -31,12 +31,12 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
                         </span>
                     )}
                 </h3>
-                <p className="text-brown-600 text-sm mb-4 leading-relaxed">
+                <p className="text-brown-600 text-sm mb-4 leading-relaxed flex-1">
                     {work.description}
                 </p>
 
                 {work.technologies && work.technologies.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    <div className="flex flex-wrap gap-2 mt-auto pt-2">
                         {work.technologies.map((tech, index) => (
                             <span
                                 key={index}
@@ -58,7 +58,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             return (
                 <Link
                     to={work.link}
-                    className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col"
+                    className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col h-full"
                 >
                     {CardContent}
                 </Link>
@@ -70,7 +70,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
                 href={work.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col"
+                className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 block cursor-pointer flex flex-col h-full"
             >
                 {CardContent}
             </a>
@@ -78,7 +78,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
     }
 
     return (
-        <div className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 flex flex-col">
+        <div className="group bg-cream-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-sand-200 flex flex-col h-full">
             {CardContent}
         </div>
     );

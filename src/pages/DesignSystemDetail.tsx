@@ -58,9 +58,9 @@ const DesignSystemDetail: React.FC = () => {
                             UIデザインシステム
                         </h1>
                         <p className="text-xl text-brown-700 leading-relaxed">
-                            SaaS製品向けのデザインシステム構築。
+                            親しい関係の人とのみ、思い出や日常を共有できます。
                             <br />
-                            コンポーネントライブラリとガイドラインを整備し、一貫性のある体験を実現。
+                            「いいね」の代わりに承認ボタンがあり、投稿を承認しあうことができる承認欲求を満たすアプリです。
                         </p>
                     </div>
                 </section>
@@ -127,12 +127,12 @@ const DesignSystemDetail: React.FC = () => {
                                     デザインコンセプト
                                 </h4>
                                 <p className="text-brown-700 mb-6 leading-relaxed">
-                                    SaaS製品の複数チームが共通して使えるよう、一貫性・拡張性・アクセシビリティを軸に設計しました。
-                                    カラーやタイポグラフィなどのトークンを定義し、どのコンポーネントにも統一された見た目が適用される仕組みを構築しています。
+                                    ホーム・投稿・承認一覧・マイページなど、全画面のUIをFigmaでデザイン。
+                                    2人だけの空間をイメージしたミントグリーンを基調としたカラーパレットを採用し、穏やかで親密な雰囲気を表現しています。
                                 </p>
                                 <div className="flex justify-center">
                                     <img
-                                        src="/images/projects/design-system/screenshot-overview.png"
+                                        src="/images/projects/ZzzCast/ZzzCast-design.png"
                                         alt="デザインカンプ全体像"
                                         className="w-full max-w-3xl rounded-lg shadow-md"
                                         onError={(e) => {
@@ -195,37 +195,26 @@ const DesignSystemDetail: React.FC = () => {
                                     ごとにFigmaのVariantsで管理し、開発チームがそのままHandoff
                                     できる状態に整えています。
                                 </p>
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-3 gap-4">
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            基本コンポーネント一覧
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-components.png"
-                                            alt="コンポーネント一覧"
+                                            src="/images/projects/ZzzCast/Group 25.png"
+                                            alt="コンポーネントライブラリ 1"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            バリアント &amp; ステート管理
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-variants.png"
-                                            alt="バリアントとステート管理"
+                                            src="/images/projects/ZzzCast/Group 26.png"
+                                            alt="コンポーネントライブラリ 2"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="/images/projects/ZzzCast/Group 27.png"
+                                            alt="コンポーネントライブラリ 3"
+                                            className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
                                 </div>

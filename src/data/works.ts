@@ -20,6 +20,16 @@ export const engineeringWorks: Work[] = [
     },
     {
         id: "eng-2",
+        title: "ZzzCast",
+        description:
+            "2人専用のSNSアプリ。投稿や相手の投稿の閲覧が可能。すべてのページのデザイン設計から実装までを担当。",
+        imageUrl: "/images/works/zzzcast.png",
+        link: "/works/design-system",
+        technologies: ["React", "TypeScript", "Supabase", "Figma"],
+        category: "engineering",
+    },
+    {
+        id: "eng-2b",
         title: "タスク管理アプリケーション",
         description:
             "React + Firebaseを使用したリアルタイムタスク管理ツール。ドラッグ&ドロップ対応。",
@@ -76,17 +86,9 @@ export const designWorks: Work[] = [
             "作成した文章を入力するだけで高性能AIが添削＆最適化。文字数調整も可能で、短時間で就活を有利に進められます。",
         imageUrl: "/images/works/es-checker.png",
         link: "/works/es-checker",
+        technologies: ["Illustrator", "Figma"],
         category: "design",
         isCollaborative: true,
-    },
-    {
-        id: "design-2",
-        title: "UIデザインシステム",
-        description:
-            "SaaS製品向けのデザインシステム構築。コンポーネントライブラリとガイドライン。",
-        imageUrl: "/images/works/design-system.jpg",
-        link: "/works/design-system",
-        category: "design",
     },
     {
         id: "design-3",
