@@ -124,11 +124,11 @@ const DesignSystemDetail: React.FC = () => {
                                     全コンポーネントのデザイン案をFigmaで作成。
                                 </p>
                                 <h4 className="text-lg font-bold text-brown-900 mb-2">
-                                    デザインコンセプト
+                                    デザイン・アプリケーションコンセプト
                                 </h4>
                                 <p className="text-brown-700 mb-6 leading-relaxed">
                                     ホーム・投稿・承認一覧・マイページなど、全画面のUIをFigmaでデザイン。
-                                    2人だけの空間をイメージしたミントグリーンを基調としたカラーパレットを採用し、穏やかで親密な雰囲気を表現しています。
+                                    既存のSNSアプリでは、不当低多数との繋がりになることが多いが、本来「見せたい・見たい人」は僅かなのでは、、という点から着想を得て開発しました。また、承認欲求を満たしたいという理由でSNSを利用するユーザーが増えていることから、「いいね」の代わりに承認ボタンを設置し、投稿を承認しあうことができる承認欲求を満たすアプリです。
                                 </p>
                                 <div className="flex justify-center">
                                     <img
@@ -146,74 +146,34 @@ const DesignSystemDetail: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Feature 2: Design Tokens */}
-                        <div className="mb-16">
-                            <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
-                                <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    デザイントークン
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-6 items-center">
-                                    <div className="flex justify-center items-center bg-white rounded-lg p-3">
-                                        <img
-                                            src="/images/projects/design-system/tokens.png"
-                                            alt="デザイントークン"
-                                            className="w-3/4 h-auto"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <p className="text-brown-600 text-base mb-3">
-                                            使用ツール：Figma
-                                        </p>
-                                        <p className="text-brown-700 leading-relaxed text-sm">
-                                            カラー・スペーシング・タイポグラフィ・角丸・シャドウなどをトークンとして定義。
-                                            ライトモード／ダークモードの切り替えにも対応できる構造にしており、
-                                            デザイン変更を一か所で管理できる効率的な体制を整えました。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         {/* Feature 3: Component Library */}
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    コンポーネントライブラリ
+                                    投稿画面
                                 </h3>
                                 <p className="text-brown-700 mb-8 leading-relaxed">
-                                    ボタン・フォーム・モーダル・テーブルなど、SaaS製品で頻繁に使われるUIパーツを網羅的にデザイン。
-                                    各コンポーネントは
-                                    <strong className="text-brown-900">
-                                        バリアント・ステート・サイズ
-                                    </strong>
-                                    ごとにFigmaのVariantsで管理し、開発チームがそのままHandoff
-                                    できる状態に整えています。
+                                    投稿画面では、タイトルと内容（本文）が入力されていれば投稿ボタンが活性化されます。画像を挿入することもできます。その場から写真を撮って投稿することもできるため、リアルタイムで日常を共有することが可能です。
                                 </p>
                                 <div className="grid grid-cols-3 gap-4">
                                     <div>
                                         <img
                                             src="/images/projects/ZzzCast/Group 25.png"
-                                            alt="コンポーネントライブラリ 1"
+                                            alt="投稿画面 1"
                                             className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
                                     <div>
                                         <img
                                             src="/images/projects/ZzzCast/Group 26.png"
-                                            alt="コンポーネントライブラリ 2"
+                                            alt="投稿画面 2"
                                             className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
                                     <div>
                                         <img
                                             src="/images/projects/ZzzCast/Group 27.png"
-                                            alt="コンポーネントライブラリ 3"
+                                            alt="投稿画面 3"
                                             className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
@@ -225,48 +185,31 @@ const DesignSystemDetail: React.FC = () => {
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    デザインガイドライン
+                                    承認画面
                                 </h3>
                                 <p className="text-brown-700 mb-8 leading-relaxed">
-                                    コンポーネントの使い方・禁止事項・アクセシビリティ基準などをドキュメント化。
-                                    「Do /
-                                    Don't」形式で視覚的に分かりやすく示し、
-                                    <strong className="text-brown-900">
-                                        デザイナー・エンジニア双方が参照しやすい
-                                    </strong>
-                                    ガイドラインを整備しました。
+                                    Reactのアニメーションライブラリを使用し、承認ボタンを押下した際にアニメーションが発火するようにすることで、ボタンを押下したことを視覚的に伝えることができます。
                                 </p>
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-3 gap-4">
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            Do / Don't ガイド
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-guideline-do.png"
-                                            alt="Do / Dontガイド"
+                                            src="/images/projects/ZzzCast/Group 30.png"
+                                            alt="承認画面 1"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            アクセシビリティチェックリスト
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-guideline-a11y.png"
-                                            alt="アクセシビリティチェックリスト"
+                                            src="/images/projects/ZzzCast/Group 31.png"
+                                            alt="承認画面 2"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="/images/projects/ZzzCast/Group 33.png"
+                                            alt="承認画面 3"
+                                            className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
                                 </div>
@@ -277,47 +220,30 @@ const DesignSystemDetail: React.FC = () => {
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
-                                    ページレイアウト
+                                    アイテム一覧
                                 </h3>
                                 <p className="text-brown-700 mb-8 leading-relaxed">
-                                    グリッドシステム・スペーシングルール・レスポンシブブレークポイントを定義し、
-                                    コンポーネントを組み合わせるだけで
-                                    <strong className="text-brown-900">
-                                        一貫性のあるページが素早く構築
-                                    </strong>
-                                    できるレイアウトテンプレートも用意しました。
+                                    5つ投稿するごとにランクが1つ上がります。1ランクにつき1アイテム手に入れることができ、ゲーム感覚で投稿を楽しむことができます。全部で150個のアイテムを用意しているので長く楽しむことができます。
                                 </p>
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <h3 className="text-2xl font-bold text-brown-900 mb-4">
+                                    プロフィール
+                                </h3>
+                                <p className="text-brown-700 mb-8 leading-relaxed">
+                                    ユーザーのアイコン・名前・自己紹介に加え、フレンドの表示ができるプロフィール画面を設計しました。アイコン画像等は好きな時に変更可能です。
+                                </p>
+                                <div className="grid grid-cols-2 gap-4">
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            グリッド &amp; スペーシング定義
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-layout-grid.png"
-                                            alt="グリッドとスペーシング定義"
+                                            src="/images/projects/ZzzCast/Group 34.png"
+                                            alt="アイテム一覧"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-brown-600 mb-2 text-center">
-                                            レイアウトテンプレート
-                                        </p>
                                         <img
-                                            src="/images/projects/design-system/screenshot-layout-template.png"
-                                            alt="レイアウトテンプレート"
+                                            src="/images/projects/ZzzCast/Group 37.png"
+                                            alt="プロフィール"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
                                 </div>
@@ -337,7 +263,7 @@ const DesignSystemDetail: React.FC = () => {
                                 デザインツール
                             </h3>
                             <div className="flex flex-wrap justify-center gap-4">
-                                {["Figma", "Illustrator"].map((tool) => (
+                                {["Figma"].map((tool) => (
                                     <span
                                         key={tool}
                                         className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
@@ -345,6 +271,24 @@ const DesignSystemDetail: React.FC = () => {
                                         {tool}
                                     </span>
                                 ))}
+                            </div>
+                        </div>
+                        <div className="border-t border-sand-300 mb-8" />
+                        <div className="mb-8">
+                            <h3 className="text-sm font-semibold text-brown-600 uppercase tracking-widest mb-4 text-center">
+                                開発ツール
+                            </h3>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {["React", "TypeScript", "Supabase"].map(
+                                    (tool) => (
+                                        <span
+                                            key={tool}
+                                            className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"
+                                        >
+                                            {tool}
+                                        </span>
+                                    ),
+                                )}
                             </div>
                         </div>
                     </div>
