@@ -41,12 +41,12 @@ export const engineeringWorks: Work[] = [
     },
     {
         id: "eng-3",
-        title: "企業コーポレートサイト",
+        title: "議事録作成サイト",
         description:
-            "モダンでレスポンシブな企業サイト。CMSによるコンテンツ管理機能付き。",
-        imageUrl: "/images/works/corporate.jpg",
-        technologies: ["Vue.js", "Nuxt.js", "Contentful", "SCSS"],
-        link: "https://example.com/corporate",
+            "ReactとTypeScriptを使用した議事録作成サイト。会議で手早く議事録を作成できるようにするため、入力フォームを作成。",
+        imageUrl: "/images/works/minutes-app.png",
+        technologies: ["React", "TypeScript"],
+        link: "/works/minutes-app",
         category: "engineering",
     },
     {
