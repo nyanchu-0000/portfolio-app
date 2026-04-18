@@ -4,7 +4,7 @@ export const skills: Skill[] = [
     // Frontend
     {
         name: "HTML/CSS",
-        level: 3,
+        level: 4,
         category: "Frontend",
     },
     {
@@ -53,12 +53,12 @@ export const skills: Skill[] = [
     },
     {
         name: "Adobe Photoshop",
-        level: 4,
+        level: 3,
         category: "Design",
     },
     {
         name: "Adobe Illustrator",
-        level: 4,
+        level: 3,
         category: "Design",
     },
 

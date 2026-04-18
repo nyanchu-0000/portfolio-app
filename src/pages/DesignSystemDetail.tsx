@@ -55,7 +55,7 @@ const DesignSystemDetail: React.FC = () => {
                             戻る
                         </Link>
                         <h1 className="text-4xl md:text-5xl font-bold text-brown-900 mb-4">
-                            UIデザインシステム
+                            ZzzCast
                         </h1>
                         <p className="text-xl text-brown-700 leading-relaxed">
                             親しい関係の人とのみ、思い出や日常を共有できます。

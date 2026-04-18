@@ -30,12 +30,12 @@ export const engineeringWorks: Work[] = [
     },
     {
         id: "eng-2b",
-        title: "タスク管理アプリケーション",
+        title: "Git コマンド クイズ",
         description:
-            "React + Firebaseを使用したリアルタイムタスク管理ツール。ドラッグ&ドロップ対応。",
-        imageUrl: "/images/works/task-app.jpg",
-        technologies: ["React", "TypeScript", "Firebase", "Material-UI"],
-        link: "https://example.com/task-app",
+            "ReactとTypeScriptを使用したGit コマンド クイズサイト。正答・誤答を問わず、回答直後に解説を表示。",
+        imageUrl: "/images/works/git-quiz-app.png",
+        technologies: ["React", "TypeScript", "Gemini"],
+        link: "https://git-quiz-app.vercel.app/",
         github: "https://github.com/username/task-app",
         category: "engineering",
     },
