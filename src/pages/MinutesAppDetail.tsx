@@ -67,55 +67,68 @@ const MinutesAppDetail: React.FC = () => {
                             制作のポイント
                         </h2>
 
-                        {/* Feature 2 */}
+                        {/* Feature 1 */}
                         <div className="mb-16">
                             <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
                                 <h3 className="text-2xl font-bold text-brown-900 mb-4">
                                     機能紹介
                                 </h3>
                                 <p className="text-brown-700 mb-8 leading-relaxed">
-                                    主要機能の画面遷移や操作フローを設計・実装。
+                                    参加者（クライアント）に名前を入力すると、様を入力しなくても自動で変換されます。
                                 </p>
-                                <div className="grid grid-cols-3 gap-4">
+                                <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <img
-                                            src="/images/projects/minutes-app/screen1.png"
+                                            src="/images/projects/minutes-app/スクリーンショット 2026-04-19 11.34.42.png"
                                             alt="画面 1"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
                                     <div>
                                         <img
-                                            src="/images/projects/minutes-app/screen2.png"
+                                            src="/images/projects/minutes-app/スクリーンショット 2026-04-19 11.34.50.png"
                                             alt="画面 2"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
+                                        />
+                                    </div>
+                                </div>
+                                <p className="text-brown-700 my-6 leading-relaxed">
+                                    文末に「（」を入力すると、参加者の名前が選択できます。「。」が抜けている場合はあわせて入力され、クライアントの参加者を選択した場合は「様」も自動で入力されます。
+                                </p>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <img
+                                            src="/images/projects/minutes-app/スクリーンショット 2026-04-19 11.38.33.png"
+                                            alt="画面 3"
+                                            className="w-full rounded-lg shadow-md"
                                         />
                                     </div>
                                     <div>
                                         <img
-                                            src="/images/projects/minutes-app/screen3.png"
-                                            alt="画面 3"
+                                            src="/images/projects/minutes-app/スクリーンショット 2026-04-19 11.38.50.png"
+                                            alt="画面 4"
                                             className="w-full rounded-lg shadow-md"
-                                            onError={(e) => {
-                                                const target =
-                                                    e.target as HTMLImageElement;
-                                                target.src =
-                                                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23d9d3c6" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%239a8d7d" font-family="sans-serif" font-size="16"%3E画像を追加予定%3C/text%3E%3C/svg%3E';
-                                            }}
                                         />
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Feature 2 */}
+                        <div className="mb-16">
+                            <div className="bg-cream-50 rounded-lg p-8 shadow-lg border border-sand-200">
+                                <h3 className="text-2xl font-bold text-brown-900 mb-4">
+                                    データ保持
+                                </h3>
+                                <p className="text-brown-700 mb-8 leading-relaxed">
+                                    謝ってリロードしても入力内容が消えないよう、セッションストレージを活用して状態を永続化。リモートに情報を保存しないため、セキュリティとパフォーマンスの両面で優れています。
+                                </p>
+                                <div className="flex justify-center">
+                                    <img
+                                        src="/images/projects/minutes-app/スクリーンショット 2026-04-19 11.50.33.png"
+                                        alt="データ保持"
+                                        className="w-full max-w-2xl rounded-lg shadow-md"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -134,10 +147,8 @@ const MinutesAppDetail: React.FC = () => {
                             </h3>
                             <div className="flex flex-wrap justify-center gap-4">
                                 {[
-                                    "Vue.js",
-                                    "Nuxt.js",
-                                    "Contentful",
-                                    "SCSS",
+                                    "React",
+                                    "TypeScript",
                                 ].map((tool) => (
                                     <span
                                         key={tool}
