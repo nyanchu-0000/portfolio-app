@@ -20,7 +20,7 @@ export const engineeringWorks: Work[] = [
     },
     {
         id: "eng-2",
-        title: "ZzzCast",
+        title: "ZzzCast（SNSアプリ）",
         description:
             "2人専用のSNSアプリ。投稿や相手の投稿の閲覧が可能。すべてのページのデザイン設計から実装までを担当。",
         imageUrl: "/images/works/zzzcast.png",
