@@ -49,16 +49,25 @@ export const qualifications: Qualification[] = [
         issuer: "Google",
         date: "2023年11月",
     },
+];
+
+export const otherQualifications: Qualification[] = [
     {
-        id: "qual-9",
+        id: "other-1",
         name: "中学校教諭一種免許状（美術）",
         issuer: "神奈川県教育委員会",
-        date: "2024年11月",
+        date: "2024年3月",
     },
     {
-        id: "qual-10",
+        id: "other-2",
         name: "高等学校教諭一種免許状（美術）",
         issuer: "神奈川県教育委員会",
-        date: "2024年11月",
+        date: "2024年3月",
+    },
+    {
+        id: "other-3",
+        name: "PADI認定 オープン・ウォーター・ダイバー",
+        issuer: "PADI",
+        date: "2026年3月",
     },
 ];

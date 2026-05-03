@@ -80,6 +80,41 @@ const SliderRow: React.FC<SliderRowProps> = ({ title, works }) => {
     );
 };
 
+const ComingSoonCard: React.FC = () => (
+    <div className="flex-shrink-0 w-72 md:w-80 h-[480px] rounded-lg border-2 border-dashed border-sand-300 bg-cream-50/50 flex flex-col items-center justify-center gap-3 opacity-50">
+        <div className="w-10 h-10 rounded-full border-2 border-sand-400 flex items-center justify-center">
+            <svg className="w-5 h-5 text-sand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
+            </svg>
+        </div>
+        <p className="text-sm font-medium text-brown-500 tracking-wide">準備中</p>
+    </div>
+);
+
+const DesignRow: React.FC<{ title: string; works: typeof designWorks }> = ({ title, works }) => {
+    if (works.length === 1) {
+        return (
+            <div className="mb-16">
+                <h3 className="text-xl font-bold text-brown-900 mb-6 px-2">{title}</h3>
+
+                <div className="flex items-start gap-8 overflow-x-auto pb-4" style={{ scrollbarWidth: "none" }}>
+                    <div className="flex-shrink-0 w-72 md:w-80 h-[480px] flex flex-col">
+                        <WorkCard work={works[0]} />
+                    </div>
+                    <ComingSoonCard />
+                    <ComingSoonCard />
+                </div>
+
+                <div className="flex flex-col items-center mt-6 gap-1">
+                    <p className="text-xs text-brown-400 tracking-wider">順次更新予定</p>
+                </div>
+            </div>
+        );
+    }
+
+    return <SliderRow title={title} works={works} />;
+};
+
 const Works: React.FC = () => {
     return (
         <Section id="works" title="WORKS" className="bg-cream-100">
@@ -88,7 +123,7 @@ const Works: React.FC = () => {
             </div>
 
             <SliderRow title="Engineering" works={engineeringWorks} />
-            <SliderRow title="Design" works={designWorks} />
+            <DesignRow title="Design" works={designWorks} />
         </Section>
     );
 };

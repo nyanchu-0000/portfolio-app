@@ -9,7 +9,7 @@ export const skills: Skill[] = [
     },
     {
         name: "JavaScript",
-        level: 2,
+        level: 3,
         category: "Frontend",
     },
     {
@@ -59,6 +59,11 @@ export const skills: Skill[] = [
     {
         name: "Adobe Illustrator",
         level: 3,
+        category: "Design",
+    },
+    {
+        name: "CLIP STUDIO PAINT",
+        level: 4,
         category: "Design",
     },
 

@@ -7,7 +7,7 @@ export const careerItems: CareerItem[] = [
         company: "Webサイト運用・保守",
         position: "フロントエンドエンジニア",
         description:
-            "大手金融機関のWebサイト運用・保守。React/TypeScriptを用いたWebアプリケーション開発。UI/UXの設計・実装を担当。アクセシビリティやUI改善にも注力。",
+            "大手金融機関のWebサイト運用。フロントエンドエンジニアとして、主にReact/TypeScriptを用いた実装を担当。",
     },
     {
         id: "career-2",
@@ -15,7 +15,7 @@ export const careerItems: CareerItem[] = [
         company: "社外留学",
         position: "Webデザイナー / （フロントエンドエンジニア）",
         description:
-            "企業サイトやECサイトのデザインからコーディングまで一貫して担当。クライアントとの要件定義、デザインカンプ制作、実装を経験。",
+            "ゼブラ企業に常駐し、主にHPに掲載するバナーや画像の制作を担当。その他大手企業サイトのアクセシビリティチェック等を担当。",
     },
     {
         id: "career-3",
@@ -23,7 +23,7 @@ export const careerItems: CareerItem[] = [
         company: "社内研修",
         position: "Webデザイナー / フロントエンドエンジニア",
         description:
-            "バナー制作、LP制作、UIデザインを担当。Figmaを使用したデザインシステムの構築にも参画。",
+            "研修にて、デザインカンプ制作から、LPの実装等、幅広い領域を学ぶ。",
     },
     {
         id: "career-5",
@@ -31,6 +31,6 @@ export const careerItems: CareerItem[] = [
         company: "美術大学",
         position: "学生",
         description:
-            "日本画専攻にて、絵画の制作と同時に、教育心理や法学、美術教育等の学校教育を学ぶ。",
+            "日本画専攻にて、絵画の制作と同時に教育心理や法学、美術教育等の学校教育を学ぶ。都内や横浜にて展示会も実施。公募展にて受賞多数あり。",
     },
 ];

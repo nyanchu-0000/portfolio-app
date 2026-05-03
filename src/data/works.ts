@@ -94,38 +94,6 @@ export const designWorks: Work[] = [
         category: "design",
         isCollaborative: true,
     },
-    {
-        id: "design-3",
-        title: "モバイルアプリUI/UX",
-        description:
-            "フィットネスアプリのUI/UXデザイン。ユーザビリティテストを実施。",
-        imageUrl: "/images/works/mobile-ui.jpg",
-        category: "design",
-    },
-    {
-        id: "design-4",
-        title: "ブランドロゴデザイン（仮）",
-        description:
-            "スタートアップ企業向けのロゴ・ブランドアイデンティティデザイン。",
-        imageUrl: "/images/works/logo-design.jpg",
-        category: "design",
-    },
-    {
-        id: "design-5",
-        title: "LP デザイン（仮）",
-        description:
-            "サービス訴求のためのランディングページデザイン。CVR向上を意識したレイアウト。",
-        imageUrl: "/images/works/lp-design.jpg",
-        category: "design",
-    },
-    {
-        id: "design-6",
-        title: "アイコンセット（仮）",
-        description:
-            "Illustratorで制作した統一感のあるUIアイコンセット。SVG形式で書き出し。",
-        imageUrl: "/images/works/icon-set.jpg",
-        category: "design",
-    },
 ];
 
 export const artWorks: Work[] = [
