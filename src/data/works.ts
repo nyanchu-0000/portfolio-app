@@ -54,7 +54,7 @@ export const engineeringWorks: Work[] = [
         id: "eng-4",
         title: "割り勘アプリ",
         description:
-            "2人の支払い金額を入力するだけで、割り勘の差額を自動計算。どちらがいくら多く払うべきかを即座に表示します。本アプリ独自に、「多く払うべき金額」機能を備えています。",
+            "2人の支払い金額を入力するだけで、割り勘の差額を自動計算。どちらがいくら多く払うべきかを即座に表示します。本アプリ独自に、「多く払うべき金額」機能を搭載。",
         imageUrl: "/images/works/nyanchu-app.png",
         technologies: ["JavaScript"],
         link: "https://nyanchu-app.vercel.app/split",
@@ -64,7 +64,7 @@ export const engineeringWorks: Work[] = [
         id: "eng-5",
         title: "メトロノーム",
         description:
-            "BPMを入力するだけで、メトロノームが鳴ります。ホバー時のみスピンボタンを表示し、ボタン操作と手動数値入力の両方に対応します音だけでなくアニメーションで視覚化されます。",
+            "BPMを入力するだけで、メトロノームが起動。ホバー時のみスピンボタンを表示し、ボタン操作と手動数値入力の両方に対応。音だけでなくアニメーションで視覚化される。",
         imageUrl: "/images/works/metronome.png",
         technologies: ["JavaScriptct"],
         link: "https://metronome-seven-coral.vercel.app/",
@@ -73,11 +73,17 @@ export const engineeringWorks: Work[] = [
     },
     {
         id: "eng-6",
-        title: "天気予報アプリ（仮）",
+        title: "経路沿いスポット検索（準備中）",
         description:
-            "OpenWeather APIを使用したリアルタイム天気予報アプリ。位置情報対応。",
+            "設定した移動ルートの左右一帯にあるスポットだけをフィルタリングして表示する検索アプリ。",
         imageUrl: "/images/works/weather-app.jpg",
-        technologies: ["React", "TypeScript", "OpenWeather API"],
+        technologies: [
+            "React",
+            "TypeScript",
+            "Maps JavaScript API",
+            "Places API",
+            "Directions API",
+        ],
         category: "engineering",
     },
 ];
