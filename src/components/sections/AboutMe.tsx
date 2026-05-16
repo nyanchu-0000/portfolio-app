@@ -50,12 +50,21 @@ const AboutMe: React.FC = () => {
 
                     {/* Right side - Image */}
                     <div className="relative flex justify-center">
-                        <div className="w-5/6 aspect-square rounded-lg overflow-hidden shadow-lg">
-                            <img
-                                src="/images/about/IMG_4937.png"
-                                alt="About me"
-                                className="w-full h-full object-cover"
-                            />
+                        {/* 外枠 + コーナー装飾 */}
+                        <div className="w-5/6 aspect-square relative p-4 border-2 border-brown-700 shadow-lg">
+                            {/* 四隅の装飾 */}
+                            <div className="absolute top-1.5 left-1.5 w-5 h-5 border-t-2 border-l-2 border-brown-900"></div>
+                            <div className="absolute top-1.5 right-1.5 w-5 h-5 border-t-2 border-r-2 border-brown-900"></div>
+                            <div className="absolute bottom-1.5 left-1.5 w-5 h-5 border-b-2 border-l-2 border-brown-900"></div>
+                            <div className="absolute bottom-1.5 right-1.5 w-5 h-5 border-b-2 border-r-2 border-brown-900"></div>
+                            {/* 内側ボーダー */}
+                            <div className="w-full h-full border border-brown-400 p-1">
+                                <img
+                                    src="/images/about/IMG_9533.png"
+                                    alt="About me"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
