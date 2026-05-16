@@ -75,7 +75,7 @@ export const engineeringWorks: Work[] = [
         id: "eng-6",
         title: "経路沿いスポット検索（準備中）",
         description:
-            "設定した移動ルートの左右一帯にあるスポットだけをフィルタリングして表示する検索アプリ。",
+            "設定した移動ルートの左右一帯にあるスポットだけをフィルタリングして表示。",
         imageUrl: "/images/works/weather-app.jpg",
         technologies: [
             "React",

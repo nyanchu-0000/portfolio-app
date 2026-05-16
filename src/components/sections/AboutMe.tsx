@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../common/Section";
+import TerminalCodeBlock from "../common/TerminalCodeBlock";
 
 const AboutMe: React.FC = () => {
     return (
@@ -8,13 +9,21 @@ const AboutMe: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Text content */}
                     <div>
-                        <h3 className="text-3xl md:text-4xl font-bold mb-6 text-brown-900 leading-tight">
-                            Hello World
-                        </h3>
+                        <div className="mb-6">
+                            <TerminalCodeBlock />
+                        </div>
 
                         <div className="space-y-4 text-brown-700">
                             <p className="leading-relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur animi sequi earum assumenda quasi blanditiis exercitationem vitae est perferendis possimus? Molestias fugiat laborum numquam earum, exercitationem veniam obcaecati placeat tenetur.
+                                2002年生まれ、神奈川県出身。
+                                <br />
+                                2024年に女子美術大学を卒業し、現在は東京を拠点に、フロントエンドエンジニアとして主にWebサイトの制作をしています。
+                                <br />
+                                自主制作では、日常で不便に感じたものなどから着想を経て、アプリケーションを開発しています。
+                                <br />
+                                イメージをもとに、デザイン〜実装までを一貫して行い独自のアイデアを形にすることで、ユーザーや自身の生活をよりよいものにすることが目標です。
+                                <br />
+                                ふたつの「想像」「創造」をモットーに、作品を作り続けています。
                             </p>
                         </div>
 
@@ -39,25 +48,14 @@ const AboutMe: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right side - Image placeholder */}
-                    <div className="relative">
-                        <div className="aspect-square bg-sand-200 rounded-lg overflow-hidden shadow-lg">
-                            <div className="w-full h-full flex items-center justify-center text-brown-400">
-                                {/* Placeholder for image */}
-                                <svg
-                                    className="w-24 h-24 opacity-30"
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="1"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                    <polyline points="21 15 16 10 5 21"></polyline>
-                                </svg>
-                            </div>
+                    {/* Right side - Image */}
+                    <div className="relative flex justify-center">
+                        <div className="w-5/6 aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img
+                                src="/images/about/IMG_4937.png"
+                                alt="About me"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 </div>
