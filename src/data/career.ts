@@ -4,24 +4,24 @@ export const careerItems: CareerItem[] = [
     {
         id: "career-1",
         period: "2025年4月 - 現在",
-        company: "Webサイト運用・保守",
+        company: "Webサイト保守・運用",
         position: "フロントエンドエンジニア",
         description:
-            "大手金融機関のWebサイト運用。フロントエンドエンジニアとして、主にReact/TypeScriptを用いた実装を担当。",
+            "大手企業のWebサイト運用。フロントエンドエンジニアとして参画。",
     },
     {
         id: "career-2",
         period: "2024年9月 - 2025年3月",
-        company: "社外留学",
-        position: "Webデザイナー / （フロントエンドエンジニア）",
+        company: "社外常駐",
+        position: "デザイナー / （フロントエンドエンジニア）",
         description:
-            "ゼブラ企業に常駐し、主にHPに掲載するバナーや画像の制作を担当。その他大手企業サイトのアクセシビリティチェック等を担当。",
+            "主にロゴマークや、HPに掲載するバナー、イラスト画像の制作を担当。その他大手企業サイトのアクセシビリティチェック等を実施。",
     },
     {
         id: "career-3",
         period: "2024年4月 - 2024年8月",
         company: "社内研修",
-        position: "Webデザイナー / フロントエンドエンジニア",
+        position: "デザイナー / フロントエンドエンジニア",
         description:
             "研修にて、デザインカンプ制作から、LPの実装等、幅広い領域を学ぶ。",
     },

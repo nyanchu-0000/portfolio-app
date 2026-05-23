@@ -108,7 +108,7 @@ const ESCheckerDetail: React.FC = () => {
                                 </h3>
                                 <p className="text-brown-700 mb-2 leading-relaxed">
                                     Photoshop、Illustratorを用いてメインビジュアルを作成。
-                                    写真素材の色調補正・合成はPhotoshopで行い、ロゴやテキスト要素のベクター描画はIllustratorで仕上げました。
+                                    写真素材の色調補正・合成はPhotoshopで行い、ロゴやテキストはIllustratorで仕上げました。
                                 </p>
                                 <div className="flex justify-center">
                                     <img

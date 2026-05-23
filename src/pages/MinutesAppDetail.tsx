@@ -121,7 +121,7 @@ const MinutesAppDetail: React.FC = () => {
                                     データ保持
                                 </h3>
                                 <p className="text-brown-700 mb-8 leading-relaxed">
-                                    謝ってリロードしても入力内容が消えないよう、セッションストレージを活用して状態を永続化。リモートに情報を保存しないため、セキュリティとパフォーマンスの両面で優れています。
+                                    誤ってリロードしても入力内容が消えないよう、セッションストレージを活用して状態を永続化。リモートに情報を保存しないため、セキュリティとパフォーマンスの両面で優れています。
                                 </p>
                                 <div className="flex justify-center">
                                     <img
@@ -146,10 +146,7 @@ const MinutesAppDetail: React.FC = () => {
                                 開発ツール
                             </h3>
                             <div className="flex flex-wrap justify-center gap-4">
-                                {[
-                                    "React",
-                                    "TypeScript",
-                                ].map((tool) => (
+                                {["React", "TypeScript"].map((tool) => (
                                     <span
                                         key={tool}
                                         className="px-6 py-3 bg-sand-200 text-brown-800 text-lg rounded-full font-medium shadow-md"

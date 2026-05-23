@@ -1,48 +1,41 @@
 import type { Skill } from "../types/index";
 
 export const skills: Skill[] = [
-    // Frontend
+    // Programming
     {
         name: "HTML/CSS",
         level: 4,
-        category: "Frontend",
+        category: "Programming",
     },
     {
         name: "JavaScript",
         level: 3,
-        category: "Frontend",
+        category: "Programming",
     },
     {
         name: "TypeScript",
         level: 3,
-        category: "Frontend",
+        category: "Programming",
     },
     {
         name: "React",
         level: 3,
-        category: "Frontend",
+        category: "Programming",
     },
     {
         name: "Next.js",
         level: 2,
-        category: "Frontend",
+        category: "Programming",
     },
     {
         name: "Tailwind CSS",
         level: 2,
-        category: "Frontend",
+        category: "Programming",
     },
-
-    // Backend
     {
         name: "Node.js",
         level: 2,
-        category: "Backend",
-    },
-    {
-        name: "supabase",
-        level: 2,
-        category: "Backend",
+        category: "Programming",
     },
 
     // Design
@@ -67,6 +60,13 @@ export const skills: Skill[] = [
         category: "Design",
     },
 
+    // Infrastructure
+    {
+        name: "Docker",
+        level: 1,
+        category: "Infrastructure",
+    },
+
     // Tools
     {
         name: "Git/GitHub",
@@ -83,6 +83,11 @@ export const skills: Skill[] = [
         level: 5,
         category: "Tools",
     },
+    {
+        name: "Supabase",
+        level: 2,
+        category: "Tools",
+    },
 ];
 
-export const skillCategories = ["Frontend", "Backend", "Design", "Tools"];
+export const skillCategories = ["Programming", "Infrastructure", "Design", "Tools"];
