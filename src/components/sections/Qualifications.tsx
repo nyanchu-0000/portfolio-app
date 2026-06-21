@@ -47,7 +47,7 @@ const QualificationTable: React.FC<{ data: typeof qualifications }> = ({ data })
 
 const Qualifications: React.FC = () => {
     return (
-        <Section id="qualifications" title="QUALIFICATIONS" className="bg-cream-100">
+        <Section id="qualifications" title="QUALIFICATIONS" className="bg-cream-100/80">
             <div className="max-w-5xl mx-auto space-y-12">
                 <QualificationTable data={qualifications} />
 

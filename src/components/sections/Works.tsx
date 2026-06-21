@@ -117,7 +117,7 @@ const DesignRow: React.FC<{ title: string; works: typeof designWorks }> = ({ tit
 
 const Works: React.FC = () => {
     return (
-        <Section id="works" title="WORKS" className="bg-cream-100">
+        <Section id="works" title="WORKS" className="bg-cream-100/80">
             <div className="text-center mb-12">
                 <p className="text-brown-700 text-lg">制作実績</p>
             </div>

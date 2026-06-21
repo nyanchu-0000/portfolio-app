@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <Section id="skills" className="bg-cream-50">
+        <Section id="skills" className="bg-cream-50/80">
             {/* カスタムタイトル行（「？」ボタン付き） */}
             <div className="text-center mb-16 relative">
                 <div className="inline-flex items-center gap-3">

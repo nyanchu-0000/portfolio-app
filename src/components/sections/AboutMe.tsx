@@ -4,7 +4,7 @@ import TerminalCodeBlock from "../common/TerminalCodeBlock";
 
 const AboutMe: React.FC = () => {
     return (
-        <Section id="about" title="ABOUT" className="bg-cream-50">
+        <Section id="about" title="ABOUT" className="bg-cream-50/80">
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Text content */}

@@ -8,6 +8,7 @@ import Skills from "../components/sections/Skills";
 import Works from "../components/sections/Works";
 import Qualifications from "../components/sections/Qualifications";
 import Career from "../components/sections/Career";
+import BackgroundBirds from "../components/common/BackgroundBirds";
 
 function Home() {
     const { hash } = useLocation();
@@ -24,9 +25,10 @@ function Home() {
     }, [hash]);
 
     return (
-        <div className="min-h-screen bg-cream-100">
+        <div className="relative min-h-screen bg-cream-100 overflow-x-hidden">
+            <BackgroundBirds />
             <Header />
-            <main>
+            <main className="relative z-10">
                 <Hero />
                 <AboutMe />
                 <Skills />
