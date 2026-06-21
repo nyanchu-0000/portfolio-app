@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             {/* Bird image on the right */}
             <div className="absolute right-12 top-1/2 transform -translate-y-[30%] hidden lg:block">
                 <img
-                    src="/bird.png"
+                    src="/images/about/profile/bird.png"
                     alt="Bird illustration"
                     className="w-[40rem] h-auto opacity-90 animate-fade-in"
                     style={{ animationDelay: "0.6s" }}
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                             style={{ marginLeft: "-1.5rem" }}
                         >
                             <img
-                                src="/yui-gamo-logo.png"
+                                src="/images/about/profile/yui-gamo-logo.png"
                                 alt="Yui Gamo"
                                 className="block w-full"
                                 style={{
