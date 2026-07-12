@@ -4,11 +4,14 @@ import TerminalCodeBlock from "../common/TerminalCodeBlock";
 
 const AboutMe: React.FC = () => {
     return (
-        <Section id="about" title="ABOUT" className="bg-cream-50/80">
+        <Section id="about" title="ABOUT" className="bg-cream-50">
             <div className="max-w-6xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Text content */}
-                    <div>
+                    <div
+                        className="rounded-2xl p-6 bg-cream-50/80 backdrop-blur-sm"
+                        style={{ boxShadow: "0 0 60px 40px rgb(253 252 251 / 0.8)" }}
+                    >
                         <div className="mb-6">
                             <TerminalCodeBlock />
                         </div>

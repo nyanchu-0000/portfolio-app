@@ -12,6 +12,9 @@ const BackgroundBirds: React.FC = () => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setAboutSeen(true);
+                } else if (entry.boundingClientRect.top > 0) {
+                    // About がビューポートより下にある（未到達 or 上に戻った）
+                    setAboutSeen(false);
                 }
             },
             { threshold: 0.1 }
@@ -35,33 +38,57 @@ const BackgroundBirds: React.FC = () => {
 
     const visible = aboutSeen && !footerVisible;
 
+    const commonStyle: React.CSSProperties = {
+        position: "fixed",
+        zIndex: 5,
+        opacity: visible ? 1 : 0,
+        transition: "opacity 2s ease",
+    };
+
     return (
-        <div
-            aria-hidden="true"
-            className="pointer-events-none"
-            style={{
-                position: "fixed",
-                top: "35%",
-                left: "3%",
-                zIndex: 2,
-                opacity: visible ? 1 : 0,
-                transition: "opacity 2s ease",
-            }}
-        >
-            <div className="animate-float-mid" style={{ animationDelay: "0.4s" }}>
-                <img
-                    src="/images/about/profile/IMG_0080.PNG"
-                    alt=""
-                    draggable={false}
-                    style={{
-                        display: "block",
-                        width: "340px",
-                        transform: "rotate(-4deg)",
-                        userSelect: "none",
-                    }}
-                />
+        <>
+            {/* 左：スズメ */}
+            <div
+                aria-hidden="true"
+                className="pointer-events-none"
+                style={{ ...commonStyle, top: "35%", left: "3%" }}
+            >
+                <div className="animate-float-mid" style={{ animationDelay: "0.4s" }}>
+                    <img
+                        src="/images/about/profile/IMG_0080.PNG"
+                        alt=""
+                        draggable={false}
+                        style={{
+                            display: "block",
+                            width: "340px",
+                            transform: "rotate(-4deg)",
+                            userSelect: "none",
+                        }}
+                    />
+                </div>
             </div>
-        </div>
+
+            {/* 右：フクロウ */}
+            <div
+                aria-hidden="true"
+                className="pointer-events-none"
+                style={{ ...commonStyle, top: "30%", right: "3%" }}
+            >
+                <div className="animate-float-mid" style={{ animationDelay: "1.2s" }}>
+                    <img
+                        src="/images/about/profile/IMG_0079.PNG"
+                        alt=""
+                        draggable={false}
+                        style={{
+                            display: "block",
+                            width: "340px",
+                            transform: "rotate(4deg)",
+                            userSelect: "none",
+                        }}
+                    />
+                </div>
+            </div>
+        </>
     );
 };
 

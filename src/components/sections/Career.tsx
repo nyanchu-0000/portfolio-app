@@ -4,7 +4,7 @@ import { careerItems } from "../../data/career";
 
 const Career: React.FC = () => {
     return (
-        <Section id="career" title="CAREER" className="bg-cream-50/80">
+        <Section id="career" title="CAREER" className="bg-cream-50">
             <div className="max-w-4xl mx-auto">
                 <div className="relative">
                     {/* Timeline line */}

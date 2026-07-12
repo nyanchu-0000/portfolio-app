@@ -28,7 +28,7 @@ function Home() {
         <div className="relative min-h-screen bg-cream-100 overflow-x-hidden">
             <BackgroundBirds />
             <Header />
-            <main className="relative z-10">
+            <main>
                 <Hero />
                 <AboutMe />
                 <Skills />
