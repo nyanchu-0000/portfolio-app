@@ -47,7 +47,7 @@ export const qualifications: Qualification[] = [
         id: "qual-8",
         name: "Googleアナリティクス（GA4）",
         issuer: "Google",
-        date: "2023年11月",
+        date: "2024年6月",
     },
 ];
 
